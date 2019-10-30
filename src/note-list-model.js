@@ -6,7 +6,6 @@
 
   NoteList.prototype.createNote = function(note) {
     this.notes.push(note);
-    // return note;
   }
   
   NoteList.prototype.viewAllNotes = function() {
