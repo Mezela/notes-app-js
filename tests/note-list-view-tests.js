@@ -28,6 +28,16 @@ function testViewZeroNoteListHTML(){
   assert.isEqual(noteListView.viewNoteListHTML() === "<ul><li><div></div></li></ul>" )
 }
 
+function testCanViewOnly20Characters(){
+  var longNote = new Note("This text is much longer than the required 20 characters")
+  var noteList = new NoteList()
+  noteList.createNote(longNote)
+  var noteListView = new NoteListView(noteList)
+
+  assert.isEqual(noteListView.viewNoteListHTML() === "<ul><li><div>This text is much lo</div></li></ul>")
+}
+
 testViewTwoNoteListHTML();
 testViewOneNoteListHTML();
 testViewZeroNoteListHTML();
+testCanViewOnly20Characters();

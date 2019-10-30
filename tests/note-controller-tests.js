@@ -1,23 +1,26 @@
 function testNoteControllerReturnsHTML(){
 
-  function DocumentDouble() {
-    this.innerHTML = "Favourite drink: Gin and Tonic"
+  let ElementDouble = {
+    innerHTML: "Favourite drink: Gin and Tonic"
   }
 
-  DocumentDouble.prototype = {
+  let DocumentDouble = {
     getElementById: function(){
-      return this.innerHTML;
+      return ElementDouble
     }
   }
 
-  let note = new Note("Favourite drink: Gin and Tonic")
+  // let elementDouble = new ElementDouble();
+  // let documentDouble = new DocumentDouble();
+  
+
+  let note = new Note("New Favourite drink: Water")
   let noteListModel = new NoteList()
   noteListModel.createNote(note)
   let noteController = new NoteController(noteListModel)
 
-  let documentDouble = new DocumentDouble();
 
-  assert.isEqual(noteController.renderHTML(documentDouble) === '<ul><li><div>Favourite drink: Gin and Tonic</div></li></ul>')
+  assert.isEqual(noteController.renderHTML(DocumentDouble) === '<ul><li><div>New Favourite drink:</div></li></ul>')
 
 }
 
