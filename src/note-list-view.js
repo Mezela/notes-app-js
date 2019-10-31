@@ -10,8 +10,9 @@
     oldNoteList = this.allNotes.notes
 
     for (let index = 0; index < oldNoteList.length; index++) {
-
-      newNoteList.push(oldNoteList[index].text.slice(0,20))
+      result = oldNoteList[index].text.slice(0,20)
+      noteID = oldNoteList[index].id
+      newNoteList.push("<a href=#notes/" + noteID + ">" + result + "</a>")
       // console.log("oldlist", oldNoteList[index].text)
     }
     note = newNoteList.join("</div></li><li><div>")
@@ -20,6 +21,10 @@
     // console.log("string", string)
   }
 
+  NoteListView.prototype.getById = function(id){
+    console.log("allNotes", this.allNotes.viewAllNotes())
+    return this.allNotes.viewAllNotes()[id]
+  }
 
   exports.NoteListView = NoteListView;
 })(this);

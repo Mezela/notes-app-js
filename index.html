@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Notes App</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+  </head>
 
-  <!-- Testing Framework Library -->
+  <body>
+  <h1>Notes</h1>
+  <div href="" id="app">Note 1</div>
+
+
+
+  </body>
+  <!-- Source Code -->
+  <script src="src/note-model.js"></script>
+  <script src="src/note-list-model.js"></script>
+    <script src="src/note-list-view.js"></script>
+    <script src="src/note-controller.js"></script>
+    <script src="src/single-note-view.js"></script>
+    <script src="src/id-generator.js"></script>
+    <script src="src/app.js"></script>
+    <!-- Testing Framework Library -->
   <script src="tests/assert.js"></script>
-
-  
-
-
-</head>
-<body>
-
-<h1>Notes</h1>
-<div id="app">Hello</div>
-
-
-<!-- Source Code -->
-<script src="src/note-model.js"></script>
-<script src="src/note-list-model.js"></script>
-  <script src="src/note-list-view.js"></script>
-  <script src="src/note-controller.js"></script>
-  <script src="src/single-note-view.js"></script>
-<!-- Testing Code -->
-<script src="tests/note-model-tests.js"></script>
-<script src="tests/note-list-model-tests.js"></script>
-<script src="tests/note-list-view-tests.js"></script>
-<script src="tests/note-controller-tests.js"></script>
-<script src="tests/single-note-view-tests.js"></script>
-
-
-
-
-</body>
+  <!-- Testing Code -->
+  <script src="tests/note-model-tests.js"></script>
+  <script src="tests/note-list-model-tests.js"></script>
+  <script src="tests/note-list-view-tests.js"></script>
+  <script src="tests/note-controller-tests.js"></script>
+  <script src="tests/single-note-view-tests.js"></script>
 </html>

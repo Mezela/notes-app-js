@@ -13,7 +13,7 @@
   exports.NoteController = NoteController;
 })(this);
 
-// console.log("document", document)
+
 // let new_note = new Note("Favourite drink: Gin")
 
 // let noteListModel = new NoteList()
