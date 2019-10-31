@@ -14,6 +14,7 @@ function testNoteControllerReturnsHTML(){
   // let documentDouble = new DocumentDouble();
   
   ID.reset()
+  
   let note = new Note("New Favourite drink: Water")
   let noteListModel = new NoteList()
   noteListModel.createNote(note)

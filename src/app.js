@@ -36,4 +36,16 @@ window.onload = function(){
 
   makeURLChangeShowForNote()
 
+  function addNewNote(){
+    document
+    .getElementById("text")
+    .addEventListener("submit", function(submitEvent){
+      
+      submitEvent.preventDefault();
+      console.log(submitEvent.target[0].value)
+      // (submitEvent.target[0].value
+
+    })
+  }
+  addNewNote();
 }
